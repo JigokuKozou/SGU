@@ -1,4 +1,5 @@
-﻿using BuilderImpl;
+﻿using Adapter;
+using BuilderImpl;
 using System.Drawing.Imaging;
 
 namespace ProgrammingTechnologies
@@ -7,7 +8,7 @@ namespace ProgrammingTechnologies
     {
         static void Main(string[] args)
         {
-            StartBuilderDemo();
+            StartAdapterDemo();
         }
 
         static void StartBuilderDemo()
@@ -15,7 +16,15 @@ namespace ProgrammingTechnologies
             KitchenRoom kitchen = new KitchenRoom(12, 12);
             Apartment apartment = new Apartment(kitchen);
             apartment.GenerateRoom();
-            kitchen.GetRoom(42).Save("out.jpg", ImageFormat.Jpeg);
+            kitchen.GetRoom(42).Save("outBuilder.jpg", ImageFormat.Jpeg);
+        }
+
+        static void StartAdapterDemo()
+        {
+            BasementAdapter basement = new BasementAdapter(12, 12);
+            Apartment apartment = new Apartment(basement);
+            apartment.GenerateRoom();
+            basement.GetRoom(42).Save("outAdapter.jpg", ImageFormat.Jpeg);
         }
     }
 }
