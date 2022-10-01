@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace BuilderImpl
+namespace Builder
 {
     public enum ItemsType
     {

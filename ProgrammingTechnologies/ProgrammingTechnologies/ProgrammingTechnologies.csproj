@@ -55,9 +55,9 @@
       <Project>{5C1991B3-A783-407A-BF6C-DD0B669B6570}</Project>
       <Name>Adapter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BuilderImpl\BuilderImpl.csproj">
-      <Project>{4cb6e3d5-abac-475b-93da-e68599009042}</Project>
-      <Name>BuilderImpl</Name>
+    <ProjectReference Include="..\Builder\Builder.csproj">
+      <Project>{4CB6E3D5-ABAC-475B-93DA-E68599009042}</Project>
+      <Name>Builder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

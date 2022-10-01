@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace BuilderImpl
+namespace Builder
 {
     public abstract class Room
     {

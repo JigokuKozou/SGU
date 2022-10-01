@@ -1,5 +1,5 @@
 ﻿using Adapter;
-using BuilderImpl;
+using Builder;
 using System.Drawing.Imaging;
 
 namespace ProgrammingTechnologies

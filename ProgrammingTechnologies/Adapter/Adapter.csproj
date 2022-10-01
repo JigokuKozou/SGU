@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuilderImpl\BuilderImpl.csproj">
+    <ProjectReference Include="..\Builder\Builder.csproj">
       <Project>{4CB6E3D5-ABAC-475B-93DA-E68599009042}</Project>
-      <Name>BuilderImpl</Name>
+      <Name>Builder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
