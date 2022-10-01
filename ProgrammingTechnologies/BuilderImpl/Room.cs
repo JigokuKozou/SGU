@@ -112,7 +112,7 @@ namespace BuilderImpl
             return bitmap;
         }
 
-        private void SetRectangle(Bitmap bitmap, Color color, int startX, int endX, int startY, int endY)
+        private static void SetRectangle(Bitmap bitmap, Color color, int startX, int endX, int startY, int endY)
         {
             for (int y = startY; y < endY; y++)
             {
