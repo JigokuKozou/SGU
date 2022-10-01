@@ -8,23 +8,23 @@ namespace ProgrammingTechnologies
     {
         static void Main(string[] args)
         {
-            StartAdapterDemo();
+            StartBuilderDemo(scale: 42, width: 12, height: 12);
         }
 
-        static void StartBuilderDemo()
+        static void StartBuilderDemo(int scale, int width, int height)
         {
-            KitchenRoom kitchen = new KitchenRoom(12, 12);
+            ArrayRoom kitchen = new KitchenRoom(width, height);
             Apartment apartment = new Apartment(kitchen);
             apartment.GenerateRoom();
-            kitchen.GetRoom(42).Save("outBuilder.jpg", ImageFormat.Jpeg);
+            kitchen.GetRoom(scale).Save("outBuilder.jpg", ImageFormat.Jpeg);
         }
 
-        static void StartAdapterDemo()
+        static void StartAdapterDemo(int scale, int width, int height)
         {
-            BasementAdapter basement = new BasementAdapter(12, 12);
+            ArrayRoom basement = new BasementAdapter(width, height);
             Apartment apartment = new Apartment(basement);
             apartment.GenerateRoom();
-            basement.GetRoom(42).Save("outAdapter.jpg", ImageFormat.Jpeg);
+            basement.GetRoom(scale).Save("outAdapter.jpg", ImageFormat.Jpeg);
         }
     }
 }
