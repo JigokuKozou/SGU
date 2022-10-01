@@ -89,7 +89,7 @@ namespace BuilderImpl
             return result;
         }
 
-        public Bitmap GetRoom(int scale)
+        virtual public Bitmap GetRoom(int scale)
         {
             Bitmap bitmap = new Bitmap(width * scale, height * scale);
 
