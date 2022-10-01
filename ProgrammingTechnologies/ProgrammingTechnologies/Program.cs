@@ -1,5 +1,7 @@
 ﻿using Adapter;
 using Builder;
+using Decorator;
+using System.Drawing;
 using System.Drawing.Imaging;
 
 namespace ProgrammingTechnologies
@@ -8,7 +10,7 @@ namespace ProgrammingTechnologies
     {
         static void Main(string[] args)
         {
-            StartBuilderDemo(scale: 42, width: 12, height: 12);
+            StartDecoratorDemo();
         }
 
         static void StartBuilderDemo(int scale, int width, int height)
@@ -25,6 +27,14 @@ namespace ProgrammingTechnologies
             Apartment apartment = new Apartment(basement);
             apartment.GenerateRoom();
             basement.GetRoom(scale).Save("outAdapter.jpg", ImageFormat.Jpeg);
+        }
+
+        static void StartDecoratorDemo(string pathImage = "outBuilder.jpg")
+        {
+            Bitmap bitmap = new Bitmap(pathImage);
+            EditorOfBitmap editor = new GrayscaleConverter(new ReflectorHorizontallyBitmap(new ReflectorVerticalBitmap()));
+
+            editor.GetFormattedBitmap(bitmap).Save("decorated" + pathImage, ImageFormat.Jpeg);
         }
     }
 }
