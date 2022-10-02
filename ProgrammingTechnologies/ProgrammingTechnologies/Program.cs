@@ -4,6 +4,7 @@ using Decorator;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using Facade;
 
 namespace ProgrammingTechnologies
 {
@@ -20,6 +21,8 @@ namespace ProgrammingTechnologies
             StartAdapterDemo(scale, width, height);
 
             StartDecoratorDemo();
+
+            StartFacadeDemo();
         }
 
         static void StartBuilderDemo(int scale, int width, int height)
@@ -69,6 +72,25 @@ namespace ProgrammingTechnologies
 
             Console.WriteLine("Decorator demo finished!" + Environment.NewLine +
                 "File output: " + pathOutput + Environment.NewLine);
+        }
+
+        static void StartFacadeDemo()
+        {
+            Console.WriteLine("Decorator demo working...");
+
+            var group = new WarMachineGroup();
+
+            group.Add(new Tigr());
+            group.Add(new Havoc());
+            group.Add(new Havoc());
+            group.Add(new Tigr());
+            group.Add(new Tigr());
+            group.Add(new Tigr());
+            group.Add(new Tigr());
+
+            group.Attack();
+
+            Console.WriteLine("Decorator demo finished!");
         }
     }
 }
