@@ -3,6 +3,7 @@ using Builder;
 using Decorator;
 using Facade;
 using Flyweight;
+using Strategy;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -16,6 +17,7 @@ namespace ProgrammingTechnologies
             int scale = 42;
             int width = 12;
             int height = 12;
+            int sizeFlyweight = 5;
 
             StartBuilderDemo(scale, width, height);
             
@@ -24,10 +26,11 @@ namespace ProgrammingTechnologies
             StartDecoratorDemo();
             
             StartFacadeDemo();
+            
+            StartFlyweightDemo(sizeFlyweight);
 
-            StartFlyweightDemo(5);
+            StartStrategyDemo();
         }
-
         static void StartBuilderDemo(int scale, int width, int height)
         {
 
@@ -112,6 +115,25 @@ namespace ProgrammingTechnologies
             }
 
             Console.WriteLine("Flyweight demo finished!" + Environment.NewLine);
+        }
+
+        static void StartStrategyDemo()
+        {
+            Console.WriteLine("Strategy demo working...");
+
+            Hero player = new Hero("Гордон Фримен");
+
+            player.Attack();
+            Console.WriteLine();
+
+            player.Take(new Crowbar());
+            player.Attack();
+            Console.WriteLine();
+
+            player.Take(new Pistol());
+            player.Attack();
+
+            Console.WriteLine("Strategy demo finished!" + Environment.NewLine);
         }
     }
 }
