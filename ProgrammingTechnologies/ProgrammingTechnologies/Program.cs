@@ -5,6 +5,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using Facade;
+using Flyweight;
 
 namespace ProgrammingTechnologies
 {
@@ -17,12 +18,14 @@ namespace ProgrammingTechnologies
             int height = 12;
 
             StartBuilderDemo(scale, width, height);
-
+            
             StartAdapterDemo(scale, width, height);
-
+            
             StartDecoratorDemo();
-
+            
             StartFacadeDemo();
+
+            StartFlyweightDemo(5);
         }
 
         static void StartBuilderDemo(int scale, int width, int height)
@@ -90,7 +93,25 @@ namespace ProgrammingTechnologies
 
             group.Attack();
 
-            Console.WriteLine("Decorator demo finished!");
+            Console.WriteLine("Decorator demo finished!" + Environment.NewLine);
+        }
+
+        static void StartFlyweightDemo(int size)
+        {
+            Console.WriteLine("Flyweight demo working...");
+
+            CarFactory carFactory = new CarFactory();
+
+            for (int i = 1; i < size + 1; i++)
+            {
+                var ford = carFactory.GetCar(CarType.FordMustang);
+                var skoda = carFactory.GetCar(CarType.SkodaRapid);
+
+                ford.SetLocation(i, 0);
+                skoda.SetLocation(0, i);
+            }
+
+            Console.WriteLine("Flyweight demo finished!" + Environment.NewLine);
         }
     }
 }
