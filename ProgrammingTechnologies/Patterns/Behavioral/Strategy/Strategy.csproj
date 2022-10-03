@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDFB41DA-90BA-425E-AE3D-7D81A46D567D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ProgrammingTechnologies</RootNamespace>
-    <AssemblyName>ProgrammingTechnologies</AssemblyName>
+    <ProjectGuid>{FF7D1431-ECA9-49E9-92C7-533447406530}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Strategy</RootNamespace>
+    <AssemblyName>Strategy</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,37 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Hero.cs" />
+    <Compile Include="IGun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Patterns\Behavioral\Strategy\Strategy.csproj">
-      <Project>{FF7D1431-ECA9-49E9-92C7-533447406530}</Project>
-      <Name>Strategy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Patterns\Creational\Builder\Builder.csproj">
-      <Project>{4cb6e3d5-abac-475b-93da-e68599009042}</Project>
-      <Name>Builder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Patterns\Structural\Adapter\Adapter.csproj">
-      <Project>{5c1991b3-a783-407a-bf6c-dd0b669b6570}</Project>
-      <Name>Adapter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Patterns\Structural\Decorator\Decorator.csproj">
-      <Project>{8f7dd986-ca1b-4cab-b054-8085b6bbbead}</Project>
-      <Name>Decorator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Patterns\Structural\Facade\Facade.csproj">
-      <Project>{8af23413-99cb-4621-97d7-c5896e5d3ec6}</Project>
-      <Name>Facade</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Patterns\Structural\Flyweight\Flyweight.csproj">
-      <Project>{0dba4823-3911-4253-a20e-5f45d3296b03}</Project>
-      <Name>Flyweight</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
