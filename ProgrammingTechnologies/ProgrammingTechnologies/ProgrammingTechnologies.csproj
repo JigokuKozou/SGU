@@ -51,24 +51,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Adapter\Adapter.csproj">
-      <Project>{5C1991B3-A783-407A-BF6C-DD0B669B6570}</Project>
-      <Name>Adapter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Builder\Builder.csproj">
-      <Project>{4CB6E3D5-ABAC-475B-93DA-E68599009042}</Project>
+    <ProjectReference Include="..\Patterns\Creational\Builder\Builder.csproj">
+      <Project>{4cb6e3d5-abac-475b-93da-e68599009042}</Project>
       <Name>Builder</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Decorator\Decorator.csproj">
-      <Project>{8F7DD986-CA1B-4CAB-B054-8085B6BBBEAD}</Project>
+    <ProjectReference Include="..\Patterns\Structural\Adapter\Adapter.csproj">
+      <Project>{5c1991b3-a783-407a-bf6c-dd0b669b6570}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patterns\Structural\Decorator\Decorator.csproj">
+      <Project>{8f7dd986-ca1b-4cab-b054-8085b6bbbead}</Project>
       <Name>Decorator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Facade\Facade.csproj">
-      <Project>{8AF23413-99CB-4621-97D7-C5896E5D3EC6}</Project>
+    <ProjectReference Include="..\Patterns\Structural\Facade\Facade.csproj">
+      <Project>{8af23413-99cb-4621-97d7-c5896e5d3ec6}</Project>
       <Name>Facade</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Flyweight\Flyweight.csproj">
-      <Project>{0DBA4823-3911-4253-A20E-5F45D3296B03}</Project>
+    <ProjectReference Include="..\Patterns\Structural\Flyweight\Flyweight.csproj">
+      <Project>{0dba4823-3911-4253-a20e-5f45d3296b03}</Project>
       <Name>Flyweight</Name>
     </ProjectReference>
   </ItemGroup>
