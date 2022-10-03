@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDFB41DA-90BA-425E-AE3D-7D81A46D567D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ProgrammingTechnologies</RootNamespace>
-    <AssemblyName>ProgrammingTechnologies</AssemblyName>
+    <ProjectGuid>{0DBA4823-3911-4253-A20E-5F45D3296B03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flyweight</RootNamespace>
+    <AssemblyName>Flyweight</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,33 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CarFactory.cs" />
+    <Compile Include="ICar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Adapter\Adapter.csproj">
-      <Project>{5C1991B3-A783-407A-BF6C-DD0B669B6570}</Project>
-      <Name>Adapter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Builder\Builder.csproj">
-      <Project>{4CB6E3D5-ABAC-475B-93DA-E68599009042}</Project>
-      <Name>Builder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Decorator\Decorator.csproj">
-      <Project>{8F7DD986-CA1B-4CAB-B054-8085B6BBBEAD}</Project>
-      <Name>Decorator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Facade\Facade.csproj">
-      <Project>{8AF23413-99CB-4621-97D7-C5896E5D3EC6}</Project>
-      <Name>Facade</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Flyweight\Flyweight.csproj">
-      <Project>{0DBA4823-3911-4253-A20E-5F45D3296B03}</Project>
-      <Name>Flyweight</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
