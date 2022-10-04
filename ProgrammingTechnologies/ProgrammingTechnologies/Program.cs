@@ -33,8 +33,6 @@ namespace ProgrammingTechnologies
         }
         static void StartBuilderDemo(int scale, int width, int height)
         {
-
-
             Console.WriteLine("Builder demo working...");
 
             ArrayRoom kitchen = new KitchenRoom(width, height);
@@ -122,16 +120,23 @@ namespace ProgrammingTechnologies
             Console.WriteLine("Strategy demo working...");
 
             Hero player = new Hero("Гордон Фримен");
+            Enemy ai = new Enemy("Юнит ГО");
 
             player.Attack();
+            ai.Attack();
             Console.WriteLine();
 
             player.Take(new Crowbar());
+            ai.Take(new StunBaton());
+
             player.Attack();
+            ai.Attack();
             Console.WriteLine();
 
             player.Take(new Pistol());
+            ai.Take(new Pistol());
             player.Attack();
+            ai.Attack();
 
             Console.WriteLine("Strategy demo finished!" + Environment.NewLine);
         }

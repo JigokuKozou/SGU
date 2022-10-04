@@ -2,13 +2,13 @@
 
 namespace Strategy
 {
-    public class Hero
+    public class Enemy
     {
         private readonly string name;
 
         private IWeapon weapon;
 
-        public Hero(string name)
+        public Enemy(string name)
         {
             this.name = name;
 
@@ -28,6 +28,7 @@ namespace Strategy
         public void Attack()
         {
             Console.Write(name + " ");
+
             weapon.Attack();
         }
     }
